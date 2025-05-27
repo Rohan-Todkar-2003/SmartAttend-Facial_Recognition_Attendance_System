@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Face Recognition Employee Security Chatbot</title>
+    <link rel="icon" type="image/x-icon" href="static/navbar_icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='chatbot.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <a href="/" class="back-home-btn">
+        <div class="back-home-btn-inner">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+    </a>
+
+    <section class="msger">
+        <header class="msger-header">
+            <div class="msger-header-title">
+                <i class="fas fa-robot"></i> Smart ChatBot <i class="fas fa-robot"></i>
+            </div>
+        </header>
+
+        <main class="msger-chat">
+            <div class="msg left-msg">
+                <div class="msg-img" style="background-image: url('static/robot.png')"></div>
+                <div class="msg-bubble">
+                    <div class="msg-info">
+                        <div class="msg-info-name">Chatbot</div>
+                    </div>
+                    <div class="msg-text">Hi, welcome to the User Guide ChatBot! Ask your question. 😄</div>
+                </div>
+            </div>
+        </main>
+
+        <form class="msger-inputarea" autocomplete="off">
+            <datalist id="mylist">
+                {% for key in keys %}
+                    <option value='{{ key }}'></option>   
+                {% endfor %}
+            </datalist>
+            <input type="text" class="msger-input" id="textInput" placeholder="Ask your question" list="mylist">
+            <button type="submit" class="msger-send-btn">Send</button>
+        </form>
+    </section>
+
+    <!-- Copyright Reserved placed below the chatbot template -->
+    <div class="copyright">
+        <p>2025 SmartAttend: Employee Facial Attendance System. All rights reserved.</p>
+    </div>
+
+    <script>
+        const msgerForm = document.querySelector(".msger-inputarea");
+        const msgerInput = document.querySelector(".msger-input");
+        const msgerChat = document.querySelector(".msger-chat");
+        
+        const BOT_IMG = 'static/robot.png';
+        const PERSON_IMG = 'static/user.png';
+        const BOT_NAME = "ChatBot";
+        const PERSON_NAME = "You";
+        
+        msgerForm.addEventListener("submit", event => {
+            event.preventDefault();
+            const msgText = msgerInput.value.trim();
+            if (!msgText) return;
+            appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+            msgerInput.value = "";
+            getBotResponse(msgText);
+        });
+
+        function appendMessage(name, img, side, text) {
+            const msgHTML = `
+                <div class="msg ${side}-msg">
+                    <div class="msg-img" style="background-image: url(${img})"></div>
+                    <div class="msg-bubble">
+                        <div class="msg-info">
+                            <div class="msg-info-name">${name}</div>
+                            <div class="msg-info-time">${new Date().toLocaleTimeString()}</div>
+                        </div>
+                        <div class="msg-text">${text}</div>
+                    </div>
+                </div>`;
+            msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+            msgerChat.scrollTop = msgerChat.scrollHeight;
+        }
+
+        function getBotResponse(userMessage) {
+            fetch(`/get?msg=${encodeURIComponent(userMessage)}`)
+                .then(response => response.json())
+                .then(data => appendMessage(BOT_NAME, BOT_IMG, "left", data))
+                .catch(error => console.error("Error:", error));
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" 
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" 
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

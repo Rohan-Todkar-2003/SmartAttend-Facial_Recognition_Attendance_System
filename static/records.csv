@@ -1,0 +1,8 @@
+Id,Name,Department,Time,Date,Status
+Emp01,Rohan Todkar,IT,19:30:58,04-03-2025,Terminated
+Emp01,Rohan Todkar,IT,17:38:51,05-03-2025,Terminated
+Emp02,Sagar Patil,HR,17:39:25,05-03-2025,On Service
+Emp01,Rohan Todkar,IT,20:18:06,06-03-2025,Terminated
+Emp01,Rohan Todkar,IT,08:12:16,07-03-2025,Terminated
+Emp01,Rohan Todkar,IT,12:23:05,29-03-2025,On Service
+Emp03,Riddhesh Sutar,HR,12:23:16,29-03-2025,On Service

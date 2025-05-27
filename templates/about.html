@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  
+  <title>About Us - SmartAttend</title>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='navbar_icon.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+</head>
+
+<body>
+  <!-- Background Image Section -->
+  <section class="background-section">
+    <div class="background-wrapper">
+      <img src="{{ url_for('static', filename='bg.jpg') }}" alt="AI Background">
+    </div>
+
+    <!-- Fixed Navbar (stays on top) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top custom-navbar">
+      <div class="container">
+        <!-- Logo and Name -->
+        <a class="navbar-brand d-flex align-items-center" href="/">
+          <img src="{{ url_for('static', filename='navbar_icon.png') }}" width="35" class="d-inline-block align-top glow-logo" alt="logo">
+          <h6 class="ml-2 mb-0 navbar-title">SmartAttend: Employee Facial Attendance System</h6>
+        </a>
+
+        <!-- Toggle button for mobile -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/about" class="nav-link">About Us</a>
+            </li>
+            {% if current_user.is_anonymous %}
+            <li class="nav-item">
+              <a href="/login" class="nav-link">Login</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a href="/logout" class="nav-link">Logout</a>
+            </li>
+            <li class="nav-item">
+              <span class="nav-link user-text">Hey, {{ current_user.username }}</span>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- About Us Content -->
+    <div class="about-content">
+      <h1>About Us</h1>
+      <p>Welcome to SmartAttend, where innovation meets efficiency. We are proud to introduce our cutting-edge Face Recognition Attendance System, designed to revolutionize the way organizations manage employee attendance. Our system leverages advanced facial recognition technology to provide a seamless, secure, and accurate attendance tracking solution.</p>
+      <p>Our mission is to simplify attendance management while enhancing security and productivity. We aim to provide organizations with a reliable, user-friendly, and feature-rich system that eliminates the inefficiencies of traditional attendance methods.</p>
+    </div>
+  </section>
+
+  <!-- What We Offer Section -->
+  <section class="offer-section">
+    <h2>What We Offer</h2>
+    <p>Our Face Recognition Attendance System is a state-of-the-art solution that combines artificial intelligence, machine learning, and robust security features to deliver unparalleled performance. Here’s what sets us apart:</p>
+    <div class="features">
+      <div class="feature">
+        <h3>Multi-Format Sampling</h3>
+        <p>Accepts .jpg files for sampling, in addition to live photo capture, making it flexible and adaptable to your needs.</p>
+      </div>
+      <div class="feature">
+        <h3>Automated Email Notifications</h3>
+        <p>Employees receive instant email notifications when their attendance is marked, ensuring transparency and real-time updates.</p>
+      </div>
+      <div class="feature">
+        <h3>Comprehensive Attendance Analytics</h3>
+        <p>View detailed statistics on daily, weekly, and monthly attendance percentages, empowering you to make data-driven decisions.</p>
+      </div>
+      <div class="feature">
+        <h3>Spoof Detection</h3>
+        <p>Our advanced anti-spoofing technology ensures that only genuine faces are recognized, preventing fraudulent attempts.</p>
+      </div>
+      <div class="feature">
+        <h3>Downloadable Reports</h3>
+        <p>Easily download attendance sheets for the day or the entire duration, simplifying record-keeping and compliance.</p>
+      </div>
+      <div class="feature">
+        <h3>General Information Management</h3>
+        <p>Add and manage employee details, roles, and other relevant information within the system.</p>
+      </div>
+      <div class="feature">
+        <h3>Floating ChatBot</h3>
+        <p>Offers structured responses to FAQs on attendance, policies, and system features.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="choose-us-section">
+    <h2>Why Choose Us?</h2>
+    <div class="reasons">
+      <div class="reason">
+        <h3>Accuracy</h3>
+        <p>Our facial recognition algorithms are highly accurate, ensuring reliable attendance tracking.</p>
+      </div>
+      <div class="reason">
+        <h3>Security</h3>
+        <p>With spoof detection and secure data handling, your information is always protected.</p>
+      </div>
+      <div class="reason">
+        <h3>Ease of Use</h3>
+        <p>Intuitive interface and seamless integration make our system easy to adopt.</p>
+      </div>
+      <div class="reason">
+        <h3>Scalability</h3>
+        <p>Designed to cater to businesses of all sizes, from small teams to large enterprises.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Team Section -->
+  <section class="team-section">
+    <h2>Meet the Team</h2>
+    <div class="card-container">
+      <!-- Employee Card 1 -->
+      <div class="employee-card">
+        <img src="{{ url_for('static', filename='emp1.jpg') }}" alt="Employee 1">
+        <div class="card-content">
+          <h5>James Anderson</h5>
+          <p>SMachine Learning Engineer</p>
+          <div class="card-social">
+            <a href="#" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank" class="github"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" class="mail"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Employee Card 2 -->
+      <div class="employee-card">
+        <img src="{{ url_for('static', filename='emp2.jpeg') }}" alt="Employee 2">
+        <div class="card-content">
+          <h5>Emily Carter</h5>
+          <p>Full-Stack Developer</p>
+          <div class="card-social">
+            <a href="#" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank" class="github"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" class="mail"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Employee Card 3 -->
+      <div class="employee-card">
+        <img src="{{ url_for('static', filename='emp3.jpeg') }}" alt="Employee 3">
+        <div class="card-content">
+          <h5>Sophia Martinez</h5>
+          <p>DevOps Engineer</p>
+          <div class="card-social">
+            <a href="#" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank" class="github"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" class="mail"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Contact Us Section -->
+<section class="contact-section">
+  <h2>Contact Us</h2>
+  <p>Have questions or need support? We’re here to help!</p>
+  <div class="contact-info">
+    <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rohantodkar2003@gmail.com">info@smartattend.com</a></p>
+    <p>Phone: +91 (91) 529-0705</p>
+    <p>Address: K.V. Pendharkar, Dombivli, Maharashtra, India – 421201</p>
+  </div>
+</section>
+
+<!-- Copyright Section -->
+<div class="copyright-section">
+  <p>&copy; 2025 SmartAttend: Employee Facial Attendance System. All rights reserved.</p>
+</div>
+
+  <!-- Floating Chatbot Button -->
+  <div class="chatbot-container">
+    <a href="/helpBot" class="chatbot-button">
+      <img src="{{ url_for('static', filename='robot.png') }}" alt="Chatbot Icon">
+    </a>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

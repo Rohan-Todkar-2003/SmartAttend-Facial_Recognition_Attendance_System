@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:700&display=swap');
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* Video Section (full viewport height) */
+.video-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Video Background Styling */
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place video behind content */
+  overflow: hidden;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* ------------------------- */
+/*   Navbar Customizations   */
+/* ------------------------- */
+
+/* Fixed Navbar (stays on top) */
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /* Keep same navbar height */
+  padding: 8px 20px; /* horizontal padding remains */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Inner Container of Navbar for perfect left/right alignment */
+.custom-navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+/* Navbar Brand & Logo - Positioned at Left */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+/* Icon Styling with Glow and Zoom on Hover */
+.glow-logo {
+  animation: glow 1.5s ease-in-out infinite;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.glow-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff;
+}
+
+/* Removed hover zoom on entire brand */
+.navbar-brand:hover {
+  transform: none;
+}
+
+/* Navbar Title with hover glow effect */
+.navbar-title {
+  font-size: 16px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease-in-out;
+  margin: 0;
+}
+
+.navbar-title:hover {
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+/* Navbar Links - Positioned at Right */
+.navbar-collapse {
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px;
+  color: white !important;
+  font-family: 'Poppins', sans-serif;
+  padding: 8px 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #ffffff !important;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+  transform: scale(1.1);
+}
+
+.navbar-nav .nav-link.active {
+  color: #fefeff !important;
+  text-shadow: 0 0 20px #ffffff;
+}
+
+/* Username Text */
+.user-text {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  padding: 8px 15px;
+}
+
+.user-text:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #4400ff;
+}
+
+/* ------------------------- */
+/*    Remaining CSS below    */
+/* (unchanged from your code)  */
+/* ------------------------- */
+
+/* Social Links positioned within the video section */
+.links {
+  position: absolute;
+  top: 25vh;
+  left: 20px;
+  width: 70px;
+  transition: all 0.3s linear;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.links li {
+  height: 60px;
+  position: relative;
+}
+
+.links li a {
+  color: white;
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 60px;
+  padding-left: 25%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  transition: all 0.3s linear;
+}
+
+.links li a i {
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  font-size: 27px;
+}
+
+ul li a span {
+  display: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+a.link:hover {
+  z-index: 1;
+  width: 200px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+ul li:hover a span {
+  padding-left: 30%;
+  display: block;
+}
+
+/* Main Buttons */
+.main-buttons {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 30%;
+}
+
+/* Modern Glassmorphism Button */
+.myBtn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 24px;
+  font-size: 1.2em;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.myBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+/* Containers for Employee & Info Cards */
+.card-container,
+.info-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+/* Glassmorphism Employee Card */
+.employee-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  min-width: 250px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.employee-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+.employee-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.card-content h5 {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.card-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #a09f9f;
+}
+
+/* Social Icons inside Card */
+.card-social {
+  margin-top: 0.5rem;
+}
+
+.card-social a {
+  color: #716f6f;
+  margin: 0 0.3rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.card-social a.instagram:hover {
+  color: #E4405F;
+}
+
+.card-social a.linkedin:hover {
+  color: #0077B5;
+}
+
+.card-social a.github:hover {
+  color: #ffffff;
+}
+
+.card-social a.mail:hover {
+  color: #D14836;
+}
+
+/* Info Cards for Benefits and How-It-Works (same as Employee Cards) */
+.info-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  width: 250px;
+  height: 250px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0.5rem;
+}
+
+.info-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+.info-card .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.info-card .card-content h6 {
+  margin-top: 0.5rem;
+  color: #fff;
+}
+
+/* Custom icon styling for info cards */
+.card-icon {
+  display: block;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin: 0 auto 0.5rem auto;
+}
+
+/* Standardized Headline Style for Sub-headlines */
+.section-headline {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem auto 1.5rem auto;
+  padding: 0.5rem 1rem;
+  color: #d9d6d6;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+.section-headline::before,
+.section-headline::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.section-headline::before {
+  left: -40px;
+  transform: translateY(-50%);
+}
+.section-headline::after {
+  right: -40px;
+  transform: translateY(-50%);
+}
+
+/* Main Headline Style for "About Our System" (distinct from sub-headlines) */
+.main-headline {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 3rem auto 1.5rem;
+  padding: 0.5rem 1rem;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border: none;
+  font-family: 'Manrope', serif;
+}
+.main-headline::before,
+.main-headline::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 2px;
+  background: #ffffff;
+}
+.main-headline::before {
+  left: -80px;
+  transform: translateY(-50%);
+}
+.main-headline::after {
+  right: -80px;
+  transform: translateY(-50%);
+}
+
+/* White Section Background */
+.white-section {
+  background: url('bg_section3.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Floating Chatbot Container */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Chatbot Button with Icon */
+.chatbot-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: floatAnimation 3s ease-in-out infinite;
+}
+
+.chatbot-button img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.chatbot-button:hover {
+  box-shadow: 0 0 15px #ffffff, 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating Animation */
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Hide Scrollbar for Chrome, Safari, Opera */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.card-container::-webkit-scrollbar,
+.info-card-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide Scrollbar for Firefox */
+html, body, .card-container, .info-card-container {
+  scrollbar-width: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .custom-navbar {
+    padding: 10px 15px;
+  }
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+  }
+  .navbar-nav .nav-link {
+    font-size: 20px;
+    text-align: center;
+  }
+}
