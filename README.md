@@ -47,7 +47,7 @@ This is the main homepage of the application.
 
 ### 🧑‍💼 2. Known Face Recognition
 
-<img src="http://github.com/Rohan-Todkar-2003/SmartAttend-Facial_Recognition_Attendance_System/blob/main/Project%20Image/Attendance%20marking%20for%20known.png" alt="Known Face Attendance" width="100%"/>
+<img src="Project Image/Attendance marking for known.png" alt="Known Face Attendance" width="100%"/>
 
 When a known employee’s face is detected, the system will:
 - Recognize the face for **3 seconds**
@@ -66,7 +66,7 @@ The system integrates **anti-spoofing** detection to prevent fake attendance:
 🔒 _Note:_ The anti-spoofing model code is **not included** in this repository.  
 To access the model, visit this restricted link:  
 [Access Anti-Spoofing Model](https://drive.google.com/file/d/17CJGSiXeuKlPpphWcFj0nhCsYonecVTE/view?usp=drive_link)  
-For access, contact via [LinkedIn](https://www.linkedin.com/in/rohantodkar0705/) or [Email Me(mailto:rohantodkar@example.com)
+For access, contact via [LinkedIn](https://www.linkedin.com/in/rohantodkar0705/) or [Email Me](mailto:rohantodkar@example.com)
 
 ---
 
