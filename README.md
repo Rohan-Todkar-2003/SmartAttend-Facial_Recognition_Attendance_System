@@ -144,11 +144,12 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ## 📬 Contact
 
+📩 _Feel free to connect for collaboration, feedback, or access requests!_
 **Rohan Todkar**  
 [GitHub Profile](https://github.com/Rohan-Todkar-2003)  
-[LinkedIn](https://www.linkedin.com/in/rohantodkar0705/) 
+[LinkedIn](https://www.linkedin.com/in/rohantodkar0705/)
+
 [Email Me](mailto:rohantodkar2003@example.com) 
-📩 _Feel free to connect for collaboration, feedback, or access requests!_
 
 ---
 
