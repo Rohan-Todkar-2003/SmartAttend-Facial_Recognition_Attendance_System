@@ -16,17 +16,12 @@ A real-time **face recognition-based employee attendance system** designed for o
 
 ## 🔧 Built With
 
-## 🔧 Built With (Sticker Grid)
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=opencv" width="60" title="OpenCV"/>
-  <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/null/external-dlib-a-toolkit-for-making-real-world-machine-learning-and-data-analysis-applications-logo-color-tal-revivo.png" width="60" title="dlib"/>
-  <img src="https://avatars.githubusercontent.com/u/1961952?s=200&v=4" width="60" title="face_recognition"/>
-  <img src="https://raw.githubusercontent.com/serengil/deepface/master/icon/deepface-icon.png" width="60" title="DeepFace"/>
-  <img src="https://skillicons.dev/icons?i=flask" width="60" title="Flask"/>
-  <img src="https://skillicons.dev/icons?i=sqlite" width="60" title="SQLite"/>
-</p>
-
+- [OpenCV](https://opencv.org/) – For real-time image processing and computer vision  
+- [dlib](http://dlib.net/) – Machine learning toolkit for face detection  
+- [face_recognition](https://github.com/ageitgey/face_recognition) – Python-based facial recognition  
+- [DeepFace](https://github.com/serengil/deepface) – Deep learning for facial analysis  
+- [Flask](https://flask.palletsprojects.com/) – Lightweight web framework for backend logic  
+- **SQLite** – Lightweight, serverless database engine
 
 > 📌 Developed using **Python 3.8.13**
 
