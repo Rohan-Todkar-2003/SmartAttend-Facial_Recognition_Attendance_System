@@ -16,8 +16,17 @@ A real-time **face recognition-based employee attendance system** designed for o
 
 ## 🔧 Built With
 
-<table> <tr> <td><img src="https://img.icons8.com/color/48/000000/opencv.png"/></td> <td><strong><a href="https://opencv.org/">OpenCV</a></strong><br/>For real-time image processing and computer vision</td> </tr> <tr> <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Dlib_logo.png" width="48"/></td> <td><strong><a href="http://dlib.net/">dlib</a></strong><br/>Machine learning toolkit for face detection</td> </tr> <tr> <td><img src="https://avatars.githubusercontent.com/u/1961952?s=200&v=4" width="48"/></td> <td><strong><a href="https://github.com/ageitgey/face_recognition">face_recognition</a></strong><br/>Python-based facial recognition</td> </tr> <tr> <td><img src="https://raw.githubusercontent.com/serengil/deepface/master/icon/deepface-icon.png" width="48"/></td> <td><strong><a href="https://github.com/serengil/deepface">DeepFace</a></strong><br/>Deep learning for facial analysis</td> </tr> <tr> <td><img src="https://img.icons8.com/ios-filled/50/000000/flask.png"/></td> <td><strong><a href="https://flask.palletsprojects.com/">Flask</a></strong><br/>Lightweight web framework for backend logic</td> </tr> <tr> <td><img src="https://www.sqlite.org/images/sqlite370_banner.gif" width="48"/></td> <td><strong>SQLite</strong><br/>Lightweight, serverless database engine</td> </tr> </table>
-- **SQLite** – Lightweight, serverless database engine
+## 🔧 Built With (Sticker Grid)
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=opencv" width="60" title="OpenCV"/>
+  <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/null/external-dlib-a-toolkit-for-making-real-world-machine-learning-and-data-analysis-applications-logo-color-tal-revivo.png" width="60" title="dlib"/>
+  <img src="https://avatars.githubusercontent.com/u/1961952?s=200&v=4" width="60" title="face_recognition"/>
+  <img src="https://raw.githubusercontent.com/serengil/deepface/master/icon/deepface-icon.png" width="60" title="DeepFace"/>
+  <img src="https://skillicons.dev/icons?i=flask" width="60" title="Flask"/>
+  <img src="https://skillicons.dev/icons?i=sqlite" width="60" title="SQLite"/>
+</p>
+
 
 > 📌 Developed using **Python 3.8.13**
 
